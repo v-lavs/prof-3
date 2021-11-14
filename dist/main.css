@@ -2611,7 +2611,7 @@ body.modal-open {
     bottom: 28px
   }
 
-  .header .header__nav.open .btn-burger .line, .header:not(.header_home), .section-gallery, .section-partners {
+  .header .header__nav.open .btn-burger .line, .section-gallery, .section-partners {
     background-color: #fff
   }
 
@@ -2838,10 +2838,10 @@ body.modal-open {
     padding: 20px 0
   }
 
-  .header:not(.header_home) .ui.background--dark, .header:not(.header_home) .ui.background--white {
-    -webkit-filter: none;
-    filter: none
-  }
+  /*.header:not(.header_home) .ui.background--dark, .header:not(.header_home) .ui.background--white {*/
+    /*-webkit-filter: none;*/
+    /*filter: none*/
+  /*}*/
 
   .header .btn-burger:hover {
     -webkit-transform: none;
@@ -3212,3 +3212,4 @@ body.modal-open {
     margin-bottom: 40px
   }
 }
+

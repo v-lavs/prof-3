@@ -10,11 +10,12 @@
     <meta name="robots" content="noindex">
     <meta name="yandex" content="none">
 
-    <title>Профи Проекти</title>
+    <title>Профи проекты</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/main.css">
+    <link rel="stylesheet" href="dist/new-css.css">
 </head>
 <body>
 
@@ -29,6 +30,27 @@
                     <img src="assets/img/svg/logo-site.svg" alt="Space Cleaning" class="img img-logo">
                 </picture>
             </a>
+
+            <div class="category-nav category-nav_desk">
+                <ul class="category-nav__list">
+                    <li class="category-nav__item">
+                        <a href="#" class="category-nav__link active">Всі</a>
+                    </li>
+                    <li class="category-nav__item">
+                        <a href="#" class="category-nav__link">Брендинг</a>
+                    </li>
+                    <li class="category-nav__item">
+                        <a href="#" class="category-nav__link">Дизайн упаковки</a>
+                    </li>
+                    <li class="category-nav__item">
+                        <a href="#" class="category-nav__link">Рекламний образ</a>
+                    </li>
+                    <li class="category-nav__item">
+                        <a href="#" class="category-nav__link">Веб-сайт</a>
+                    </li>
+                </ul>
+            </div>
+
             <div class="lang-switch_mob ui">
                 <a href="#" class="lang-switch__link lang-switch__link_active">UA</a>
                 <a href="#" class="lang-switch__link">EN</a>
@@ -93,6 +115,30 @@
                 </span>
         </button>
         <section class="section-gallery">
+
+            <div class="category-nav category-nav_mob">
+                <div class="category-nav__current">Всі</div>
+                <div class="category-nav__list-wrap">
+                    <ul class="category-nav__list">
+                        <li class="category-nav__item">
+                            <a href="#" class="category-nav__link active">Всі</a>
+                        </li>
+                        <li class="category-nav__item">
+                            <a href="#" class="category-nav__link">Брендинг</a>
+                        </li>
+                        <li class="category-nav__item">
+                            <a href="#" class="category-nav__link">Дизайн упаковки</a>
+                        </li>
+                        <li class="category-nav__item">
+                            <a href="#" class="category-nav__link">Рекламний образ</a>
+                        </li>
+                        <li class="category-nav__item">
+                            <a href="#" class="category-nav__link">Веб-сайт</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
             <h1 class="hide">Наші проекти</h1>
             <div class="container" id="triggerBtnSticky">
                 <div class="block-logo">
@@ -269,7 +315,7 @@
                 </div>
             </div>
         </section>
-        <section id="contacts" class="section-contacts">
+        <section class="section-contacts" id="contacts">
             <div class="container">
 
                 <div class="section__slogan">
@@ -279,7 +325,6 @@
                 <div class="address">
                     <span class="address__item">Ми працюємо з 10:00 до 19:00</span>
                     <a href="tel:+38 097 137 40 04" class="address__item link-phone">+38 097 137 40 04</a>
-                    <a href="tel:+38 073 221 05 86" class="address__item link-phone">+38 073 221 05 86</a>
                     <span class="address__item">м. Львів  вул. Залізнична, 56</span>
 
                 </div>
@@ -302,11 +347,11 @@
                     </div>
                     <div class="form__footer">
                         <div class="wrap-btn">
-                            <button type="submit" class="btn btn_dark btn_submit">надіслати</button>
+                            <button type="submit" class="btn btn_dark btn_submit">Надіслати</button>
                         </div>
-                        <a href="#" class="link-presentation">presentation</a>
+                        <a href="#" class="link-presentation">Презентація</a>
                         <div class="dropdown">
-                            <div class="brief dropdown-bnt"> brif</div>
+                            <div class="brief dropdown-bnt">Бриф</div>
 
                             <ul class="link-list dropdown__content">
                                 <li class="dropdown__item">
@@ -361,12 +406,12 @@
                     </div>
                 </div>
                 <div class="form__footer">
-                    <button type="submit" class="btn btn_dark btn_submit">надіслати</button>
+                    <button type="submit" class="btn btn_dark btn_submit">Надіслати</button>
 
                     <div class="wrap-link">
-                        <a href="#" class="link-presentation">presentation</a>
+                        <a href="#" class="link-presentation">Презентація</a>
                         <div class="dropdown">
-                            <div class="brief dropdown-bnt"> brif</div>
+                            <div class="brief dropdown-bnt">Бриф</div>
 
                             <ul class="link-list dropdown__content">
                                 <li class="dropdown__item">
@@ -386,7 +431,6 @@
         </div>
         <div class="contact-side-form__footer">
             <a href="tel:+38 097 137 40 04" class="phone-link">+38 097 137 40 04</a>
-            <a href="tel:+38 073 221 05 86" class="phone-link">+38 073 221 05 86</a>
         </div>
     </div>
     <footer class="footer">
@@ -420,5 +464,6 @@
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="dist/main.js"></script>
+<script src="dist/new-js.js"></script>
 </body>
 </html>

@@ -22756,36 +22756,36 @@ $(document).ready(function () {
 
 
     // ACCORDION
-
-    const slideAnimationTime = 500;
-
-    $('#accordion .panel__heading, #accordion .accordion__arrow').on('click', function () {
-        if ($(this).hasClass('open')) {
-            $(this).removeClass('open');
-            $(this).siblings('.panel-collapse').slideUp(slideAnimationTime);
-        } else {
-            $('#accordion .panel__heading, #accordion .accordion__arrow').removeClass('open');
-            $(this).addClass('open');
-            const $curr = $(this);
-
-            setTimeout(function () {
-                $('.panel-collapse').slideUp(slideAnimationTime);
-                $curr.siblings('.panel-collapse').slideDown(slideAnimationTime);
-
-                setTimeout(function () {
-                    if (accordionSlider) {
-                        if ($.isArray(accordionSlider)) {
-                            accordionSlider.forEach(function (slider) {
-                                slider.update();
-                            });
-                        } else {
-                            accordionSlider.update();
-                        }
-                    }
-                }, slideAnimationTime);
-            }, 100);
-        }
-    });
+	//
+    // const slideAnimationTime = 500;
+	//
+    // $('#accordion .panel__heading, #accordion .accordion__arrow').on('click', function () {
+    //     if ($(this).hasClass('open')) {
+    //         $(this).removeClass('open');
+    //         $(this).siblings('.panel-collapse').slideUp(slideAnimationTime);
+    //     } else {
+    //         $('#accordion .panel__heading, #accordion .accordion__arrow').removeClass('open');
+    //         $(this).addClass('open');
+    //         const $curr = $(this);
+	//
+    //         setTimeout(function () {
+    //             $('.panel-collapse').slideUp(slideAnimationTime);
+    //             $curr.siblings('.panel-collapse').slideDown(slideAnimationTime);
+	//
+    //             setTimeout(function () {
+    //                 if (accordionSlider) {
+    //                     if ($.isArray(accordionSlider)) {
+    //                         accordionSlider.forEach(function (slider) {
+    //                             slider.update();
+    //                         });
+    //                     } else {
+    //                         accordionSlider.update();
+    //                     }
+    //                 }
+    //             }, slideAnimationTime);
+    //         }, 100);
+    //     }
+    // });
 
 
     // Home Banner
@@ -22925,51 +22925,51 @@ $(document).ready(function () {
     }
 
 
-    function horScroll() {
-        const $canvas = $('#horizontalScrollCanvas');
-        const $sticky = $('#horizontalScrollScene');
-        const $wrapper = $('.section-develop');
+    // function horScroll() {
+    //     const $canvas = $('#horizontalScrollCanvas');
+    //     const $sticky = $('#horizontalScrollScene');
+    //     const $wrapper = $('.section-develop');
+	//
+    //     function intiDimensions() {
+    //         if ($(window).outerWidth() < 980) {
+    //             $wrapper.css('height', 'auto');
+    //         } else {
+    //             const vw = window.innerWidth;
+    //             const vh = window.innerHeight;
+    //             const canvasWidth = $canvas.get(0).scrollWidth + vh - $('.develop__card').width();
+    //             $wrapper.height(canvasWidth);
+    //             $(window).scroll(function () {
+    //                 const $card = $('.develop__card');
+    //                 const offsetTop = $sticky.get(0).offsetTop;
+    //                 const scrollOffset = -offsetTop;
+    //                 const cardsCount = $card.length;
+    //                 const cardMargin = parseInt($card.css('marginRight'));
+    //                 const newActive = Math.floor(Math.abs(scrollOffset) / ($card.innerWidth() * 0.45 + cardMargin));
+    //                 const oldActive = $('.develop__card.active').index();
+    //                 const lastIndex = cardsCount - 1;
+    //                 const validatedIndex = newActive <= lastIndex ? newActive : lastIndex;
+	//
+    //                 if (oldActive !== validatedIndex) {
+    //                     $card.removeClass('active');
+    //                     $card.eq(validatedIndex).addClass('active');
+    //                 }
+	//
+    //                 $canvas.attr('style', `transform:translateX(${scrollOffset}px)`)
+    //             });
+    //         }
+    //     }
+	//
+    //     setTimeout(function () {
+    //         intiDimensions();
+    //     }, 100);
+	//
+    //     $(window).on('resize', function () {
+    //         intiDimensions();
+    //     });
+	//
+    // }
 
-        function intiDimensions() {
-            if ($(window).outerWidth() < 980) {
-                $wrapper.css('height', 'auto');
-            } else {
-                const vw = window.innerWidth;
-                const vh = window.innerHeight;
-                const canvasWidth = $canvas.get(0).scrollWidth + vh - $('.develop__card').width();
-                $wrapper.height(canvasWidth);
-                $(window).scroll(function () {
-                    const $card = $('.develop__card');
-                    const offsetTop = $sticky.get(0).offsetTop;
-                    const scrollOffset = -offsetTop;
-                    const cardsCount = $card.length;
-                    const cardMargin = parseInt($card.css('marginRight'));
-                    const newActive = Math.floor(Math.abs(scrollOffset) / ($card.innerWidth() * 0.45 + cardMargin));
-                    const oldActive = $('.develop__card.active').index();
-                    const lastIndex = cardsCount - 1;
-                    const validatedIndex = newActive <= lastIndex ? newActive : lastIndex;
-
-                    if (oldActive !== validatedIndex) {
-                        $card.removeClass('active');
-                        $card.eq(validatedIndex).addClass('active');
-                    }
-
-                    $canvas.attr('style', `transform:translateX(${scrollOffset}px)`)
-                });
-            }
-        }
-
-        setTimeout(function () {
-            intiDimensions();
-        }, 100);
-
-        $(window).on('resize', function () {
-            intiDimensions();
-        });
-
-    }
-
-    horScroll();
+    // horScroll();
 
 
     var waypoints = $('.section-develop .section__title').waypoint(function (direction) {

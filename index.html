@@ -10,11 +10,12 @@
     <meta name="robots" content="noindex">
     <meta name="yandex" content="none">
 
-    <title>Профи-2</title>
+    <title>Профи-3</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/main.css">
+    <link rel="stylesheet" href="dist/new-css.css">
 </head>
 <body>
 
@@ -50,12 +51,84 @@
                         <a href="page-projects.html" class="menu__link">Проекти</a>
                     </li>
                     <li class="menu__item">
-                        <a href="page-services.html" class="menu__link">Послуги</a>
+                        <a id="openDraw" href="#" class="menu__link">Послуги</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="page-services.html" class="menu__link">Про нас</a>
                     </li>
                     <li class="menu__item">
                         <a href="#contacts" class="menu__link">Контакти</a>
                     </li>
                 </ul>
+
+                <div class="drawer">
+                    <div class="header">
+                        <div class="container">
+                            <a href="/" class="header__logo">
+                                <picture>
+                                    <source srcset="assets/img/svg/big-logo-white.svg" media="(max-width: 640px)">
+                                    <img src="assets/img/svg/logo-site-white.svg" alt="Space Cleaning"
+                                         class="img img-logo">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="drawer__inner">
+                        <div class="sub-nav">
+                            <div class="sub-nav__item">
+                                <a href="#" class="sub-nav__link">Неймінг</a>
+                            </div>
+
+                            <div class="sub-nav__item">
+                                <a href="#" class="sub-nav__link">Позиціонування</a>
+                            </div>
+
+                            <div class="sub-nav__item">
+                                <a href="#" class="sub-nav__link">Логотип</a>
+                            </div>
+
+                            <div class="sub-nav__item">
+                                <a href="#" class="sub-nav__link">Дизайн упаковки</a>
+                            </div>
+
+                            <div class="sub-nav__item">
+                                <a href="#" class="sub-nav__link">Ребрендинг</a>
+                            </div>
+
+                            <div class="sub-nav__item">
+                                <a href="#" class="sub-nav__link">Рекламний образ</a>
+                            </div>
+
+                            <div class="sub-nav__item">
+                                <a href="#" class="sub-nav__link">Брендбук</a>
+                            </div>
+
+                            <div class="sub-nav__item">
+                                <a href="#" class="sub-nav__link">SEO</a>
+                            </div>
+
+                            <div class="sub-nav__item">
+                                <a href="#" class="sub-nav__link">Веб-сайт</a>
+                            </div>
+
+                            <div class="sub-nav__item">
+                                <a href="#" class="sub-nav__link">SMM</a>
+                            </div>
+
+                            <div class="sub-nav__item sub-nav__wrap-btn">
+                                <button id="backMenu" class="bnt-back">
+                                    <img src="assets/img/img-new/svg/back.svg" alt="" class="bnt-back__icon">
+                                    <span class="bnt-back__text">Назад</span>
+                                </button>
+                            </div>
+
+                        </div>
+                        <div class="lang-switch">
+                            <a href="#" class="lang-switch__link lang-switch__link_active">UA</a>
+                            <a href="#" class="lang-switch__link">EN</a>
+                        </div>
+                    </div>
+                </div>
                 <div class="lang-switch">
                     <a href="#" class="lang-switch__link lang-switch__link_active">UA</a>
                     <a href="#" class="lang-switch__link">EN</a>
@@ -91,13 +164,19 @@
             <div class="swiper-container banner__slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide banner__slide">
-                        <img src="assets/img/banner-slide.jpg" alt="">
+                        <a href="single-project.html" class="banner__sl-link">
+                            <img src="assets/img/banner-slide.jpg" alt="">
+                        </a>
                     </div>
                     <div class="swiper-slide banner__slide">
-                        <img src="assets/img/img-project4.jpg" alt="">
+                        <a href="single-project.html" class="banner__sl-link">
+                            <img src="assets/img/img-project4.jpg" alt="">
+                        </a>
                     </div>
                     <div class="swiper-slide banner__slide">
-                        <img src="assets/img/glicesed.jpg" alt="">
+                        <a href="single-project.html" class="banner__sl-link">
+                            <img src="assets/img/glicesed.jpg" alt="">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -214,85 +293,45 @@
             </div>
         </section>
 
-        <section class="section-develop   section_anim">
-            <div class="container-outer  section_anim" id="horizontalScrollScene">
-                <div class="container">
-                    <div class="section__header">
-                        <div class="container">
-                            <h2 class="section__title decor">Наші <br> послуги</h2>
-                        </div>
-                    </div>
+        <section class="develop  section_anim">
+            <div class="container">
+                <ul class="develop__list">
+                    <li class="develop__item naming">
+                        <a href="#" class="develop__link">Неймінг</a>
+                    </li>
+                    <li class="develop__item brandbook">
+                        <a href="#" class="develop__link">Брендбук</a>
+                    </li>
+                    <li class="develop__item pos-dev">
+                        <a href="#" class="develop__link">Позиціонування</a>
+                    </li>
+                    <li class="develop__item pack-dev">
+                        <a href="#" class="develop__link">Дизайн упаковки</a>
+                    </li>
+                    <li class="develop__item rebranding">
+                        <a href="#" class="develop__link">Ребрендинг</a>
+                    </li>
+                    <li class="develop__item web-st">
+                        <a href="#" class="develop__link">Веб-сайт</a>
+                    </li>
+                    <li class="develop__item advertising">
+                        <a href="#" class="develop__link">Рекламний образ</a>
+                    </li>
+                    <li class="develop__item seo-dev">
+                        <a href="#" class="develop__link">SEO</a>
+                    </li>
+                    <li class="develop__item smm-dev">
+                        <a href="#" class="develop__link">SMM</a>
+                    </li>
+                    <li class="develop__item logo-dev">
+                        <a href="#" class="develop__link">Логотип</a>
+                    </li>
 
-                    <div class="container-sticky" id="horizontalScrollSticky">
-
-                        <div class="develop__list container-translate" id="horizontalScrollCanvas">
-                            <div class="develop__card active trigger-title-hide" >
-                                <div class="card__heading">
-                                    <h3 class="card__title">Формування<br> бренду</h3>
-                                </div>
-                                <div class="card__body">
-                                    <p>
-                                        Розробляємо комплексне
-                                        рішення для виходу бренду
-                                        на ринок. Бренд-стратегія,
-                                        ім’я, бренд айдентика, простір
-                                        брендинг всіх точок контакту
-                                        клієнта з вашим брендом.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="develop__card">
-                                <div class="card__heading">
-                                    <h3 class="card__title">Дизайн<br> упаковки</h3>
-                                </div>
-                                <div class="card__body">
-                                    <p>
-                                        Ми надаємо комплекс
-                                        послуг з дизайну упаковки.
-                                        Від створення концепту
-                                        до розробки лінійки бренду
-                                        для різних ринків та супровідні
-                                        POS-матеріали для виходу
-                                        на ринок.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="develop__card">
-                                <div class="card__heading">
-                                    <h3 class="card__title">UI/UX дизайн </h3>
-                                </div>
-                                <div class="card__body">
-                                    <p>
-                                        Ми любимо мобільні та
-                                        веб-застосунки, іміджеві
-                                        сайти та монобрендові
-                                        інтернет-магазини. Інтуїтивна
-                                        зрозумілість + емоція
-                                        завдяки якій ми закохуємо
-                                        користувача у ваш продукт.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="develop__card">
-                                <div class="card__heading">
-                                    <h3 class="card__title">Сustomer Experience</h3>
-                                </div>
-                                <div class="card__body">
-                                    <p>
-                                        Створюємо якісний
-                                        клієнтський досвід на кожному
-                                        кроці знайомства споживача
-                                        з вашим сервісом.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </ul>
             </div>
         </section>
 
-        <section class="section-contacts section_anim" id="contacts">
+        <section class="section-contacts" id="contacts">
             <div class="container">
 
                 <div class="section__slogan">
@@ -302,7 +341,6 @@
                 <div class="address">
                     <span class="address__item">Ми працюємо з 10:00 до 19:00</span>
                     <a href="tel:+38 097 137 40 04" class="address__item link-phone">+38 097 137 40 04</a>
-                    <a href="tel:+38 073 221 05 86" class="address__item link-phone">+38 073 221 05 86</a>
                     <span class="address__item">м. Львів  вул. Залізнична, 56</span>
 
                 </div>
@@ -325,11 +363,11 @@
                     </div>
                     <div class="form__footer">
                         <div class="wrap-btn">
-                            <button type="submit" class="btn btn_dark btn_submit">надіслати</button>
+                            <button type="submit" class="btn btn_dark btn_submit">Надіслати</button>
                         </div>
-                        <a href="#" class="link-presentation">presentation</a>
+                        <a href="#" class="link-presentation">Презентація</a>
                         <div class="dropdown">
-                            <div class="brief dropdown-bnt"> brif</div>
+                            <div class="brief dropdown-bnt">Бриф</div>
 
                             <ul class="link-list dropdown__content">
                                 <li class="dropdown__item">
@@ -384,12 +422,12 @@
                     </div>
                 </div>
                 <div class="form__footer">
-                    <button type="submit" class="btn btn_dark btn_submit">надіслати</button>
+                    <button type="submit" class="btn btn_dark btn_submit">Надіслати</button>
 
                     <div class="wrap-link">
-                        <a href="#" class="link-presentation">presentation</a>
+                        <a href="#" class="link-presentation">Презентація</a>
                         <div class="dropdown">
-                            <div class="brief dropdown-bnt"> brif</div>
+                            <div class="brief dropdown-bnt">Бриф</div>
 
                             <ul class="link-list dropdown__content">
                                 <li class="dropdown__item">
@@ -409,24 +447,21 @@
         </div>
         <div class="contact-side-form__footer">
             <a href="tel:+38 097 137 40 04" class="phone-link">+38 097 137 40 04</a>
-            <a href="tel:+38 073 221 05 86" class="phone-link">+38 073 221 05 86</a>
         </div>
     </div>
     <footer class="footer">
         <div class="footer_top">
             <div class="social-bar">
                 <a href="#" class="social__link"><span class="hide">Instagram</span>
-                    <img class="icon" src="assets/img/svg/insta.svg" alt="">
-                </a>
-                <a href="#" class="social__link"><span class="hide">Youtube</span>
-                    <img class="icon" src="assets/img/svg/youtybe.svg" alt="">
-                </a>
-                <a href="#" class="social__link"><span class="hide">Behance</span>
-                    <img class="icon" src="assets/img/svg/bechance.svg" alt="">
+                    <img class="icon" src="assets/img/img-new/svg/insta1.svg" alt="">
                 </a>
                 <a href="#" class="social__link"><span class="hide">Facebook</span>
-                    <img class="icon" src="assets/img/svg/fb.svg" alt="">
+                    <img class="icon" src="assets/img/img-new/svg/fb1.svg" alt="">
                 </a>
+                <a href="#" class="social__link"><span class="hide">Behance</span>
+                    <img class="icon" src="assets/img/img-new/svg/bechance1.svg" alt="">
+                </a>
+
             </div>
         </div>
         <div class="infinity-block">
@@ -444,5 +479,6 @@
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="dist/main.js"></script>
+<script src="dist/new-js.js"></script>
 </body>
 </html>
