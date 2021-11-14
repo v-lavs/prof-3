@@ -22656,22 +22656,6 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 // CUSTOM SCRIPTS
 
 $(document).ready(function () {
-    // MOBILE MENU
-
-    const nav = $('.header__nav');
-
-    $('.btn-burger').on('click', function (e) {
-        e.preventDefault();
-        nav.toggleClass('open');
-        $(this).toggleClass('open');
-        $('body').toggleClass('modal-open');
-    });
-
-    $('.menu__link').on('click', function (e) {
-        nav.removeClass('open');
-        $('.btn-burger').removeClass('open');
-        $('body').removeClass('modal-open');
-    });
 
     //OPEN LIST BRIFS
 
@@ -22722,71 +22706,37 @@ $(document).ready(function () {
     smoothScrollToAnchor('.scroll-down');
     smoothScrollToAnchor('.menu .menu__item');
 
-    // SLIDER-ACCORDION
-
-    let accordionSlider;
-
-    function slidersInit() {
-        if ($('.accordion__slider').length > 0) {
-            if ($(window).width() <= 768) {
-                if (!accordionSlider) {
-                    accordionSlider = new Swiper('.accordion__slider', {
-                        pagination: {
-                            el: '.swiper-pagination',
-                            clickable: true,
-                        },
-                    });
-                }
-            } else {
-                if (accordionSlider) {
-                    if ($.isArray(accordionSlider)) {
-                        accordionSlider.forEach(function (slider) {
-                            slider.destroy(true, true)
-                        });
-                    } else {
-                        accordionSlider.destroy(true, true);
-                    }
-                    accordionSlider = null;
-                }
-            }
-        }
-    }
-
-    slidersInit();
-
-
-    // ACCORDION
-	//
-    // const slideAnimationTime = 500;
-	//
-    // $('#accordion .panel__heading, #accordion .accordion__arrow').on('click', function () {
-    //     if ($(this).hasClass('open')) {
-    //         $(this).removeClass('open');
-    //         $(this).siblings('.panel-collapse').slideUp(slideAnimationTime);
-    //     } else {
-    //         $('#accordion .panel__heading, #accordion .accordion__arrow').removeClass('open');
-    //         $(this).addClass('open');
-    //         const $curr = $(this);
-	//
-    //         setTimeout(function () {
-    //             $('.panel-collapse').slideUp(slideAnimationTime);
-    //             $curr.siblings('.panel-collapse').slideDown(slideAnimationTime);
-	//
-    //             setTimeout(function () {
-    //                 if (accordionSlider) {
-    //                     if ($.isArray(accordionSlider)) {
-    //                         accordionSlider.forEach(function (slider) {
-    //                             slider.update();
-    //                         });
-    //                     } else {
-    //                         accordionSlider.update();
-    //                     }
+    // // SLIDER-ACCORDION
+    //
+    // let accordionSlider;
+    //
+    // function slidersInit() {
+    //     if ($('.accordion__slider').length > 0) {
+    //         if ($(window).width() <= 768) {
+    //             if (!accordionSlider) {
+    //                 accordionSlider = new Swiper('.accordion__slider', {
+    //                     pagination: {
+    //                         el: '.swiper-pagination',
+    //                         clickable: true,
+    //                     },
+    //                 });
+    //             }
+    //         } else {
+    //             if (accordionSlider) {
+    //                 if ($.isArray(accordionSlider)) {
+    //                     accordionSlider.forEach(function (slider) {
+    //                         slider.destroy(true, true)
+    //                     });
+    //                 } else {
+    //                     accordionSlider.destroy(true, true);
     //                 }
-    //             }, slideAnimationTime);
-    //         }, 100);
+    //                 accordionSlider = null;
+    //             }
+    //         }
     //     }
-    // });
-
+    // }
+    //
+    // slidersInit();
 
     // Home Banner
 

@@ -2838,11 +2838,6 @@ body.modal-open {
     padding: 20px 0
   }
 
-  /*.header:not(.header_home) .ui.background--dark, .header:not(.header_home) .ui.background--white {*/
-    /*-webkit-filter: none;*/
-    /*filter: none*/
-  /*}*/
-
   .header .btn-burger:hover {
     -webkit-transform: none;
     transform: none
