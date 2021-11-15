@@ -690,6 +690,9 @@
 @media only screen and (max-width: 1660px) {
   .sub-nav {
     font-size: 28px;
+    -webkit-column-gap: 77px;
+    -moz-column-gap: 77px;
+    column-gap: 77px;
   }
 }
 
