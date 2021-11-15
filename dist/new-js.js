@@ -86,7 +86,8 @@ $(document).ready(function () {
             prevEl: ".swiper-button-prev",
         },
     });
-    const $contentBlock = $('#tsContainer');
+
+    let $contentBlock = $('.testimonials__container');
     sliderTestimonials.on('slideChange', function () {
         let contentId = $(this).data('content-id');
         let content = $('#' + contentId).html();
