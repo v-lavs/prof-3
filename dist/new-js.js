@@ -54,6 +54,7 @@ $(document).ready(function () {
         slidesPerView: 1,
         effect: 'fade',
         loop: false,
+        fadeEffect: { crossFade: true },
         spaceBetween: 10,
         pagination: {
             el: '.swiper-pagination',
@@ -65,14 +66,17 @@ $(document).ready(function () {
         $memberItems.removeClass('active');
         $(this).addClass('active');
         const index = $(this).index();
-        console.log(index);
         sliderMembers.slideTo(index);
     });
 
     //    TESTIMONIALS SLIDER
+
     const sliderTestimonials = new Swiper('#sliderTestimonials', {
         slidesPerView: 1,
         spaceBetween: 10,
+        loop:true,
+        autoplay:true,
+        delay: 1000,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -82,5 +86,11 @@ $(document).ready(function () {
             prevEl: ".swiper-button-prev",
         },
     });
-
+    const $contentBlock = $('#tsContainer');
+    sliderTestimonials.on('slideChange', function () {
+        let contentId = $(this).data('content-id');
+        let content = $('#' + contentId).html();
+        console.log( contentId);
+        $contentBlock.html(content);
+    });
 });

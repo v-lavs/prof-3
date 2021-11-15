@@ -432,6 +432,17 @@
 .our-projects__list {
   display: grid;
   grid-template-columns: 6fr 3fr 3fr;
+  grid-template-rows: 8fr 4fr;
+}
+
+.our-projects__wrap-img {
+  display: block;
+}
+
+.our-projects__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .our-projects .container {
@@ -442,9 +453,49 @@
   width: 50%;
 }
 
+.our-projects__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #000000;
+  transition: .35s;
+}
+
+.our-projects__link:hover,
+.our-projects__link:focus {
+  background-color: #000000;
+}
+
+.our-projects__link:hover > .our-projects__icon,
+.our-projects__link:focus > .our-projects__icon {
+  filter: invert(0);
+}
+
+.our-projects__link:hover > .our-projects__link-text,
+.our-projects__link:focus > .our-projects__link-text {
+  color: #ffffff;
+}
+
+.our-projects__icon {
+  display: block;
+  width: 97px;
+  height: auto;
+  filter: invert(1);
+  margin-bottom: 15px;
+  transition: .35s;
+}
+
+.our-projects__link-text {
+  font-weight: normal;
+  font-size: 18px;
+  color: #000000;
+  transition: .35s;
+}
+
 .slogan-team {
   max-width: 580px;
-  width: 100%;
+  width: 90%;
   font-size: 60px;
   line-height: 1;
   color: #000000;
@@ -505,8 +556,25 @@
 
 
 .members-teams__item {
+  position: relative;
   cursor: pointer;
   padding: 12px 0;
+}
+
+.members-teams__item:after {
+  position: absolute;
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100vw;
+  background-color: transparent;
+  bottom: 0;
+  left: -60%;
+  z-index: 0;
+}
+
+.members-teams__item.active:after {
+  background-color: #fbd300;
 }
 
 .swiper-container {
@@ -535,7 +603,7 @@
   font-size: 22px;
 }
 
-.position {
+.member-position {
   font-weight: 300;
   font-size: 15px;
 }
@@ -547,15 +615,19 @@
 
 .testimonials-slider {
   position: relative;
+  max-width: 355px;
 }
+
 .testimonials {
   padding-top: 134px;
   padding-bottom: 194px;
 }
-.testimonials .heading-section{
+
+.testimonials .heading-section {
   position: relative;
 }
-.testimonials .heading-section:before{
+
+.testimonials .heading-section:before {
   position: absolute;
   content: '';
   display: block;
@@ -567,6 +639,49 @@
   background-size: contain;
   background-position: center;
   top: -134px;
+}
+
+.testimonials .swiper-pagination {
+  display: none;
+}
+
+.testimonials__container {
+  max-width: 711px;
+  width: 100%;
+  padding-top: 6px;
+  margin-bottom: 34px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.testimonials__info-author {
+  max-width: 355px;
+  padding: 0 56px 0 68px;
+}
+
+.testimonials .author-name {
+  font-weight: 500;
+  font-size: 15px;
+  color: #000000;
+}
+
+.testimonials .author-activity {
+  font-weight: 300;
+  font-size: 13px;
+}
+
+.testimonials .swiper-button-next,
+.testimonials .swiper-button-prev {
+  top: auto;
+}
+
+.testimonials .swiper-button-prev:before {
+  background-image: url(../assets/img/img-new/svg/left-arrow-yellow.svg);
+}
+
+.testimonials .swiper-button-next:before {
+  background-image: url(../assets/img/img-new/svg/right-arrow-yellow.svg);
 }
 
 /*===========================================================================*/
@@ -588,6 +703,10 @@
   .members-teams__wrap-img {
     padding-top: 0;
   }
+
+  .slogan-team {
+    font-size: 50px;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -603,6 +722,9 @@
     display: block;
   }
 
+  .our-projects__icon {
+    width: 58px;
+  }
 }
 
 @media only screen and (max-width: 980px) {
@@ -647,6 +769,44 @@
   .members-teams .part_right {
     padding-left: 40px;
   }
+
+  .form__footer {
+    margin-bottom: 50px;
+  }
+
+  .testimonials {
+    padding-top: 60px;
+  }
+
+  .heading-section {
+    font-size: 50px;
+  }
+
+  .testimonials .heading-section:before {
+    top: -100px;
+    width: 87px;
+    height: 94px;
+  }
+
+  .our-projects {
+    padding-bottom: 160px;
+  }
+
+  .testimonials .swiper-button-next,
+  .testimonials .swiper-button-prev {
+    top: 50%;
+    margin: 0;
+  }
+
+  .testimonials .swiper-button-next:before,
+  .testimonials .swiper-button-prev:before {
+    width: 15px;
+    height: 15px;
+  }
+
+  .testimonials__info-author {
+    padding: 0 50px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -687,9 +847,6 @@
     max-width: 100%
   }
 
-  /*.members-teams__img {*/
-  /*opacity: 1;*/
-  /*}*/
   .members-teams .part_left .wrap-btn {
     display: block;
   }
@@ -713,7 +870,6 @@
     font-size: 55px;
     color: #FBD300;
     line-height: .8;
-
   }
 
   .members-teams__info .position {
@@ -722,9 +878,47 @@
     color: #ffffff;
     margin-top: 10px;
   }
+
+  .testimonials .container {
+    flex-wrap: wrap;
+  }
+
+  .testimonials .part {
+    width: 100%;
+  }
+
+  .our-projects {
+    padding-bottom: 100px;
+  }
+
+  .our-projects .part {
+    width: 100%;
+  }
+
+  .our-projects__link-text {
+    font-size: 16px;
+  }
+
+  .our-projects__icon {
+    width: 40px;
+    margin-bottom: 5px;
+  }
+
+  .our-projects .container {
+    flex-wrap: wrap;
+  }
+
+  .slogan-team {
+    margin-bottom: 35px;
+  }
 }
 
 @media only screen and (max-width: 640px) {
+  .heading-section {
+    font-weight: 500;
+    font-size: 35px;
+  }
+
   .section-gallery {
     overflow: hidden;
   }
@@ -786,12 +980,58 @@
   .section-contacts .form__footer {
     flex-direction: column;
     width: fit-content;
-    margin: 0 auto;
+    margin: 0 auto 50px;
   }
 
   .form .form__footer .dropdown,
   .form .link-presentation {
     display: block;
+  }
+
+  .members-teams {
+    padding-bottom: 90px;
+  }
+
+  .testimonials__container {
+    font-size: 16px;
+  }
+
+  .testimonials .author-name {
+    font-weight: normal;
+    font-size: 25px;
+    color: #FBD300;
+  }
+
+  .testimonials {
+    padding-bottom: 105px;
+    padding-top: 0;
+  }
+
+  .testimonials-slider {
+    max-width: 100%;
+    padding-bottom: 25px;
+  }
+
+  .testimonials__info-author {
+    padding: 0;
+  }
+
+  .testimonials .heading-section {
+    margin-bottom: 35px;
+  }
+
+  .testimonials .heading-section:before {
+    display: none;
+  }
+
+  .testimonials .swiper-button-next,
+  .testimonials .swiper-button-prev {
+    display: none;
+  }
+
+  .testimonials .swiper-pagination {
+    display: block;
+    bottom: -5px;
   }
 }
 
@@ -812,15 +1052,16 @@
     padding-left: 40px;
   }
 
-  .members-teams {
-    padding-bottom: 90px;
-  }
-
   .members-slider {
     margin: 0 -25px;
   }
 
   .members-teams__wrap-img {
     padding-top: 100%;
+  }
+
+  .heading-section {
+    font-weight: 500;
+    font-size: 35px;
   }
 }
