@@ -708,6 +708,12 @@
 
 }
 
+.single-project .related-post{
+  padding-bottom: 0;
+}
+.single-project .dev-services{
+  padding-bottom: 170px;
+}
 
 /*===========================================================================*/
 /*RESPONSIVE*/
@@ -741,6 +747,9 @@
   }
   .dev-services__list {
     column-gap: 56px;
+  }
+  .single-project .dev-services{
+    padding-top: 140px;
   }
 }
 
@@ -1081,6 +1090,9 @@
   }
   .dev-services__item{
     margin-bottom: 20px;
+  }
+  .single-project .dev-services{
+    padding-top: 110px;
   }
 }
 
