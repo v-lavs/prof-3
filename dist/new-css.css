@@ -17,7 +17,7 @@
 }
 
 .contact-side-form__header {
-
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -29,6 +29,8 @@
 
 .contact-side-form .btn-close {
   right: auto;
+  left: 0;
+  top: 0;
 }
 
 .swiper-pagination-bullet {
@@ -36,8 +38,17 @@
   height: 7px;
 }
 
-.contact-side-form .lang-switch{
+.contact-side-form .lang-switch {
   position: absolute;
+  right: 0;
+  top:15px;
+}
+.contact-side-form .lang-switch__link_active {
+  font-weight: 500;
+}
+
+.contact-side-form .logo{
+  margin-bottom: 72px;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets,
