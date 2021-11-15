@@ -41,13 +41,14 @@
 .contact-side-form .lang-switch {
   position: absolute;
   right: 0;
-  top:15px;
+  top: 15px;
 }
+
 .contact-side-form .lang-switch__link_active {
   font-weight: 500;
 }
 
-.contact-side-form .logo{
+.contact-side-form .logo {
   margin-bottom: 72px;
 }
 
@@ -750,6 +751,58 @@
 
 .single-project .dev-services {
   padding-bottom: 170px;
+}
+
+/*SINGLE SERVICES*/
+
+.single-services .related-post {
+  padding-bottom: 150px;
+}
+
+.single-services {
+  padding-top: 238px;
+}
+
+.single-services .page-title {
+  font-weight: 400;
+  font-size: 110px;
+  line-height: .8;
+  margin-bottom: 32px;
+}
+
+.substance-service .block-text {
+  max-width: 540px;
+  margin-bottom: 85px;
+}
+.substance-service .heading{
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 1;
+  margin-bottom: 37px;
+  opacity: 0.5;
+}
+
+.substance-service p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.single-services .part {
+  width: 50%;
+}
+.single-services .part_right{
+  padding-top: 68px;
+}
+.stages-of-dev{
+  padding: 30px 0 24px;
+}
+
+.stages-of-dev .stage-name{
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 5px;
 }
 
 /*===========================================================================*/
