@@ -52,9 +52,8 @@ $(document).ready(function () {
 
     const sliderMembers = new Swiper('#sliderMembers', {
         slidesPerView: 1,
-        effect: 'fade',
         loop: false,
-        fadeEffect: { crossFade: true },
+        effect: 'fade',
         spaceBetween: 10,
         pagination: {
             el: '.swiper-pagination',
@@ -88,10 +87,14 @@ $(document).ready(function () {
     });
 
     let $contentBlock = $('.testimonials__container');
+
     sliderTestimonials.on('slideChange', function () {
-        let contentId = $(this).data('content-id');
-        let content = $('#' + contentId).html();
-        console.log( contentId);
-        $contentBlock.html(content);
+        console.log(this.realIndex, this)
+        const currSlide = this.slides[this.activeIndex];
+        console.log($(currSlide).find('.ts-template'))
+        if(currSlide) {
+            let content = $(currSlide).find('.ts-template').html();
+            $contentBlock.html(content);
+        }
     });
 });
