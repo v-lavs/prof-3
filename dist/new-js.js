@@ -73,8 +73,8 @@ $(document).ready(function () {
     const sliderTestimonials = new Swiper('#sliderTestimonials', {
         slidesPerView: 1,
         spaceBetween: 10,
-        loop:true,
-        autoplay:true,
+        loop: true,
+        autoplay: true,
         delay: 1000,
         pagination: {
             el: '.swiper-pagination',
@@ -89,12 +89,24 @@ $(document).ready(function () {
     let $contentBlock = $('.testimonials__container');
 
     sliderTestimonials.on('slideChange', function () {
-        console.log(this.realIndex, this)
         const currSlide = this.slides[this.activeIndex];
-        console.log($(currSlide).find('.ts-template'))
-        if(currSlide) {
+        if (currSlide) {
             let content = $(currSlide).find('.ts-template').html();
             $contentBlock.html(content);
         }
     });
+
+
+    function line_position() {
+        const line = $('.stages-of-dev__line');
+        const $indexes = $('.stages-of-dev .index');
+        const bottom_offset = $indexes.last().offsetParent().outerHeight() - 20;
+        line.css({top: 'auto', bottom: bottom_offset, height: $indexes.last().offsetParent().offset().top + 100});
+    }
+    line_position();
+
+    $(window).on('resize', function () {
+        line_position();
+    });
+
 });
