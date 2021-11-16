@@ -37,6 +37,9 @@ $(document).ready(function () {
         $('body').removeClass('modal-open');
     });
 
+
+    //OPEN DRAWER(SUB MENU)
+
     $('#openDraw').on('click', function (e) {
         e.preventDefault();
         $('.drawer').addClass('open-draw');

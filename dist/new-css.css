@@ -467,6 +467,7 @@
 }
 
 .our-projects__wrap-img {
+  position: relative;
   display: block;
 }
 
@@ -810,13 +811,14 @@
 .stages-of-dev {
   position: relative;
   padding: 24px 0 30px 100px;
-
+  width: 0;
 }
 
 .stages-of-dev .index:before {
   counter-increment: heading;
   content: counters(heading, " ");
 }
+
 .stages-of-dev .index {
   position: absolute;
   display: flex;
@@ -846,6 +848,21 @@
   z-index: -1;
 }
 
+.stages-of-dev__content {
+
+  overflow: hidden;
+  white-space: nowrap;
+  transition: .8s;
+}
+
+.anim_width.stages-of-dev {
+  width: 100%;
+}
+
+.anim_width.stages-of-dev__content {
+
+  white-space: initial;
+}
 
 .stages-of-dev .stage-name {
   font-weight: 500;
@@ -865,31 +882,41 @@
 }
 
 
-._marquee{
-  width:100%;
-  white-space:nowrap;
-  overflow:hidden;
+._marquee {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
   font-weight: normal;
 
 }
 
+
 ._marquee span {
-  color:#000000;
+  color: #000000;
   font-size: 500px;
   line-height: 587px;
-  display:inline-block;
-  padding-left:100%;
+  display: inline-block;
+  padding-left: 100%;
   -webkit-animation: _marquee 10s infinite linear;
   animation: _marquee 10s infinite linear;
 }
 
 @-webkit-keyframes _marquee {
-  0%{-webkit-transform: translate(0, 0);}
-  100%{-webkit-transform: translate(-100%, 0);}
+  0% {
+    -webkit-transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(-100%, 0);
+  }
 }
-@keyframes _marquee{
-  0%{transform: translate(0, 0);}
-  100%{transform: translate(-100%, 0)}
+
+@keyframes _marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0)
+  }
 }
 
 /*===========================================================================*/
@@ -1332,6 +1359,46 @@
   .single-project .dev-services {
     padding-top: 110px;
   }
+
+  .our-projects__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .our-projects__link {
+    flex-grow: 1;
+    width: 50%;
+  }
+
+  .our-projects__wrap-img:nth-child(1),
+  .our-projects__wrap-img:nth-child(2),
+  .our-projects__wrap-img:nth-child(5) {
+    width: 50%;
+  }
+
+  .our-projects__wrap-img:nth-child(3),
+  .our-projects__wrap-img:nth-child(4) {
+    width: 100%;
+  }
+
+  .our-projects__wrap-img:nth-child(1),
+  .our-projects__wrap-img:nth-child(2),
+  .our-projects__wrap-img:nth-child(3) {
+    padding-top: 50%;
+  }
+
+  .our-projects__wrap-img:nth-child(5),
+  .our-projects__wrap-img:nth-child(4) {
+    padding-top: 27%;
+  }
+
+  .our-projects__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
 }
 
 @media only screen and (max-width: 480px) {
