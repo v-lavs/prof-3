@@ -815,7 +815,6 @@
 .stages-of-dev {
   position: relative;
   padding: 24px 0 30px 100px;
-  width: 0;
 }
 
 .stages-of-dev .index:before {
@@ -838,6 +837,8 @@
   color: #ffffff;
   left: -32px;
   top: 15px;
+  transform: scale(0);
+  transition: .35s;
 }
 
 .stages-of-dev__line {
@@ -847,17 +848,57 @@
   width: 1px;
   height: 100vh;
   background-color: #C4C4C4;
+  transition-duration: .35s;
+  transition-delay: .5s;
   left: 0;
   top: 0;
+  opacity: 0;
   z-index: -1;
 }
 
-.stages-of-dev__content {
+.active .stages-of-dev__line{
+  opacity: 1;
+}
 
+.stages-of-dev__content {
+  position: relative;
   overflow: hidden;
-  white-space: nowrap;
   transition: .8s;
 }
+
+.substance-service .heading {
+  position: relative;
+}
+
+.substance-service .part__content-wrap{
+  position: relative;
+}
+
+.active .substance-service__wrap-img {
+  opacity: 1;
+}
+
+.animation-bg {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: .75s;
+  transform-origin: 100% 50%;
+  z-index: 10;
+}
+
+.active .animation-bg {
+  transform: scaleX(0);
+}
+
+.active .index {
+  opacity: 1;
+  transform: scale(1);
+}
+
 
 .stages-of-dev .stage-name {
   font-weight: 500;
@@ -866,29 +907,37 @@
   margin-bottom: 5px;
 }
 
+.substance-service__wrap-img img {
+  display: block;
+  margin: 0 auto;
+}
+
 .substance-service__wrap-img {
   max-width: 580px;
   width: 70%;
   opacity: 0;
-  transition: opacity .35s;
-  animation-delay: .1s;
+  transition: opacity 1s;
 }
 
-.anim_serv-sec .part_left {
 
+@keyframes scale {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
+@keyframes fade {
+  0% {
+    opacity: 0;
 
-.anim_serv-sec .substance-service__wrap-img {
-  opacity: 1;
-}
-
-.anim_serv-sec .stages-of-dev__content {
-  white-space: initial;
-}
-
-.substance-service__wrap-img img {
-  display: block;
-  margin: 0 auto;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* PAGE 404  */
@@ -1531,7 +1580,16 @@
   .back-home {
     padding-left: 0;
   }
-  .back-home:before{
+
+  .back-home:before {
     display: none;
+  }
+
+  .stages-of-dev__line {
+    left: 25px;
+  }
+
+  .stages-of-dev .index {
+    left: -7px;
   }
 }

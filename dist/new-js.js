@@ -103,9 +103,22 @@ $(document).ready(function () {
     function line_position() {
         const line = $('.stages-of-dev__line');
         const $indexes = $('.stages-of-dev .index');
+        let height = $indexes.last().offsetParent().offset().top + 100;
+        let top_offset = 'auto';
+
+        if ($(window).width() <= 980) {
+            height = 'auto';
+            top_offset = 50;
+        }
+
         const bottom_offset = $indexes.last().offsetParent().outerHeight() - 20;
-        line.css({top: 'auto', bottom: bottom_offset, height: $indexes.last().offsetParent().offset().top + 100});
+        line.css({
+            top: top_offset,
+            bottom: bottom_offset,
+            height: height
+        });
     }
+
     line_position();
 
     $(window).on('resize', function () {
