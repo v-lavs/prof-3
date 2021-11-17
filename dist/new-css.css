@@ -897,6 +897,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100%;
 }
 
 .container {
@@ -1167,6 +1168,14 @@
     width: .5px;
   }
 
+  .back-home {
+    padding-left: 130px;
+  }
+
+  .back-home:before {
+    width: 93px;
+    height: 42px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -1471,6 +1480,9 @@
     object-fit: cover;
   }
 
+  .page-404 .infinite-line {
+    height: 210px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
