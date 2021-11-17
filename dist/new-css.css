@@ -971,7 +971,17 @@
   .single-services .part_right {
     padding-top: 32px;
   }
-
+  .page-404 .infinite-line {
+    height: 320px;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  .page-404 .content-text{
+    font-size: 33px;
+  }
+  .back-home{
+    margin-top: 80px;
+  }
 }
 
 @media only screen and (max-width: 1440px) {
