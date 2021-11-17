@@ -125,4 +125,26 @@ $(document).ready(function () {
         line_position();
     });
 
+
+    // substance-service items animation
+
+    setTimeout(function () {
+        const listItems = $('.stages-of-dev .animation-bg');
+        const indexItems = $('.stages-of-dev .index');
+        const rightHeading = $('.substance-service .heading .animation-bg');
+
+        const itemDelay = 370;
+        const startDelay = 1000;
+
+        rightHeading.css({transitionDelay: startDelay + itemDelay + 'ms'});
+
+        $.each(listItems, function (index, item) {
+            $(item).css({transitionDelay: startDelay + (index + 1) *  itemDelay + 'ms'});
+            $(indexItems[index]).css({transitionDelay: startDelay + (index + 1) * itemDelay + 'ms'});
+        });
+
+        $('.substance-service').addClass('active');
+    }, 300);
+
+
 });

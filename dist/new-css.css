@@ -60,13 +60,30 @@
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: 20px;
 }
-
+.banner__slider{
+  position: relative;
+}
 .banner__sl-link {
   display: block;
   height: 100%;
   width: 100%;
 }
 
+.banner__slider .project-info{
+  position: absolute;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  z-index: 3;
+  left: 8%;
+  bottom: 165px;
+}
+.banner__slider .project-info__name{
+  text-transform: uppercase;
+  font-size: 35px;
+  line-height: 41px;
+}
 .heading-section {
   font-weight: 400;
   font-size: 60px;
@@ -726,7 +743,7 @@
 
 /*DEV-SERVICES*/
 .dev-services {
-  padding-top: 65px;
+  padding-top: 165px;
   padding-bottom: 190px;
 }
 
@@ -781,6 +798,7 @@
 }
 
 .substance-service .heading {
+  display: inline-block;
   font-weight: 300;
   font-size: 30px;
   line-height: 1;
