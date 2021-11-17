@@ -5,7 +5,9 @@
 .header .btn-burger.open {
   height: 40px;
 }
-
+.header .container{
+  flex-direction: row;
+}
 .btn_border {
   border: 1px solid #000;
 }
