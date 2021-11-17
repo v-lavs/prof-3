@@ -855,15 +855,6 @@
   transition: .8s;
 }
 
-.anim_width.stages-of-dev {
-  width: 100%;
-}
-
-.anim_width.stages-of-dev__content {
-
-  white-space: initial;
-}
-
 .stages-of-dev .stage-name {
   font-weight: 500;
   font-size: 20px;
@@ -874,51 +865,83 @@
 .substance-service__wrap-img {
   max-width: 580px;
   width: 70%;
+  opacity: 0;
+  transition: opacity .35s;
+  animation-delay: .1s;
+}
+.anim_serv-sec .part_left {
+
+}
+.anim_serv-sec .substance-service__wrap-img {
+  opacity: 1;
+}
+
+.anim_serv-sec .stages-of-dev__content {
+  white-space: initial;
 }
 
 .substance-service__wrap-img img {
   display: block;
   margin: 0 auto;
 }
+/* PAGE 404  */
+.page-404{
+  padding: 195px 0;
+ }
 
+.container{
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.page-404 .content-text{
+  font-size: 40px;
+  line-height: 47px;
+  font-weight: 400;
+}
 
-._marquee {
+.page-404 .infinite-line {
+  background: url(../assets/img/img-new/404c1.png) repeat-x;
   width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  font-weight: normal;
-
+  height: 390px;
+  -webkit-animation: animate 25s linear reverse infinite;
+  animation: animate-404 25s linear reverse infinite;
+  margin-bottom: 40px;
 }
 
-
-._marquee span {
-  color: #000000;
-  font-size: 500px;
-  line-height: 587px;
+@-webkit-keyframes animate-404 {
+  0% {
+    background-position: 0 0
+  }
+  100% {
+    background-position: -100% 0
+  }
+}
+.back-home {
+  position: relative;
   display: inline-block;
-  padding-left: 100%;
-  -webkit-animation: _marquee 10s infinite linear;
-  animation: _marquee 10s infinite linear;
+  padding-left: 234px;
+  margin-top: 130px;
 }
 
-@-webkit-keyframes _marquee {
-  0% {
-    -webkit-transform: translate(0, 0);
-  }
-  100% {
-    -webkit-transform: translate(-100%, 0);
-  }
+.back-home:before {
+  position: absolute;
+  content: '';
+  width:166px;
+  height: 70px;
+  background-image: url(../assets/img/img-new/svg/back-large.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-background-size: contain;
+  background-size: contain;
+  bottom: 0;
+  left: 0;
 }
 
-@keyframes _marquee {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(-100%, 0)
-  }
+.back-home .btn {
+  font-size: 16px;
 }
-
 /*===========================================================================*/
 /*RESPONSIVE*/
 

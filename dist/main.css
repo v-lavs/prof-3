@@ -1016,7 +1016,7 @@ body.modal-open {
   align-items: center;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  min-width: 100vw
+  min-width: 100vw;
 }
 
 .section-partners .marquee-line {

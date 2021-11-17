@@ -22706,37 +22706,6 @@ $(document).ready(function () {
     smoothScrollToAnchor('.scroll-down');
     smoothScrollToAnchor('.menu .menu__item');
 
-    // // SLIDER-ACCORDION
-    //
-    // let accordionSlider;
-    //
-    // function slidersInit() {
-    //     if ($('.accordion__slider').length > 0) {
-    //         if ($(window).width() <= 768) {
-    //             if (!accordionSlider) {
-    //                 accordionSlider = new Swiper('.accordion__slider', {
-    //                     pagination: {
-    //                         el: '.swiper-pagination',
-    //                         clickable: true,
-    //                     },
-    //                 });
-    //             }
-    //         } else {
-    //             if (accordionSlider) {
-    //                 if ($.isArray(accordionSlider)) {
-    //                     accordionSlider.forEach(function (slider) {
-    //                         slider.destroy(true, true)
-    //                     });
-    //                 } else {
-    //                     accordionSlider.destroy(true, true);
-    //                 }
-    //                 accordionSlider = null;
-    //             }
-    //         }
-    //     }
-    // }
-    //
-    // slidersInit();
 
     // Home Banner
 
@@ -22873,54 +22842,6 @@ $(document).ready(function () {
         const tilt = $('.js-tilt').tilt();
         tilt.methods.destroy.call(tilt);
     }
-
-
-    // function horScroll() {
-    //     const $canvas = $('#horizontalScrollCanvas');
-    //     const $sticky = $('#horizontalScrollScene');
-    //     const $wrapper = $('.section-develop');
-	//
-    //     function intiDimensions() {
-    //         if ($(window).outerWidth() < 980) {
-    //             $wrapper.css('height', 'auto');
-    //         } else {
-    //             const vw = window.innerWidth;
-    //             const vh = window.innerHeight;
-    //             const canvasWidth = $canvas.get(0).scrollWidth + vh - $('.develop__card').width();
-    //             $wrapper.height(canvasWidth);
-    //             $(window).scroll(function () {
-    //                 const $card = $('.develop__card');
-    //                 const offsetTop = $sticky.get(0).offsetTop;
-    //                 const scrollOffset = -offsetTop;
-    //                 const cardsCount = $card.length;
-    //                 const cardMargin = parseInt($card.css('marginRight'));
-    //                 const newActive = Math.floor(Math.abs(scrollOffset) / ($card.innerWidth() * 0.45 + cardMargin));
-    //                 const oldActive = $('.develop__card.active').index();
-    //                 const lastIndex = cardsCount - 1;
-    //                 const validatedIndex = newActive <= lastIndex ? newActive : lastIndex;
-	//
-    //                 if (oldActive !== validatedIndex) {
-    //                     $card.removeClass('active');
-    //                     $card.eq(validatedIndex).addClass('active');
-    //                 }
-	//
-    //                 $canvas.attr('style', `transform:translateX(${scrollOffset}px)`)
-    //             });
-    //         }
-    //     }
-	//
-    //     setTimeout(function () {
-    //         intiDimensions();
-    //     }, 100);
-	//
-    //     $(window).on('resize', function () {
-    //         intiDimensions();
-    //     });
-	//
-    // }
-
-    // horScroll();
-
 
     var waypoints = $('.section-develop .section__title').waypoint(function (direction) {
         if (direction === "up") {
