@@ -1531,4 +1531,19 @@
   .single-services .related-post {
     padding-bottom: 98px;
   }
+
+  .page-404 .content-text {
+    font-size: 22px;
+  }
+
+  .back-home {
+    padding-left: 0;
+  }
+  .back-home:before{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+
 }
