@@ -971,6 +971,9 @@
   .single-services .part_right {
     padding-top: 32px;
   }
+  .page-404{
+    padding: 160px 0 120px;
+  }
   .page-404 .infinite-line {
     height: 320px;
     -webkit-background-size: cover;
