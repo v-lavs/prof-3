@@ -5,9 +5,11 @@
 .header .btn-burger.open {
   height: 40px;
 }
-.header .container{
+
+.header .container {
   flex-direction: row;
 }
+
 .btn_border {
   border: 1px solid #000;
 }
@@ -871,9 +873,11 @@
   transition: opacity .35s;
   animation-delay: .1s;
 }
+
 .anim_serv-sec .part_left {
 
 }
+
 .anim_serv-sec .substance-service__wrap-img {
   opacity: 1;
 }
@@ -886,18 +890,20 @@
   display: block;
   margin: 0 auto;
 }
-/* PAGE 404  */
-.page-404{
-  padding: 195px 0;
- }
 
-.container{
+/* PAGE 404  */
+.page-404 {
+  padding: 195px 0;
+}
+
+.container {
   flex-shrink: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.page-404 .content-text{
+
+.page-404 .content-text {
   font-size: 40px;
   line-height: 47px;
   font-weight: 400;
@@ -920,6 +926,7 @@
     background-position: -100% 0
   }
 }
+
 .back-home {
   position: relative;
   display: inline-block;
@@ -930,7 +937,7 @@
 .back-home:before {
   position: absolute;
   content: '';
-  width:166px;
+  width: 166px;
   height: 70px;
   background-image: url(../assets/img/img-new/svg/back-large.svg);
   background-repeat: no-repeat;
@@ -944,6 +951,7 @@
 .back-home .btn {
   font-size: 16px;
 }
+
 /*===========================================================================*/
 /*RESPONSIVE*/
 
@@ -973,18 +981,22 @@
   .single-services .part_right {
     padding-top: 32px;
   }
-  .page-404{
+
+  .page-404 {
     padding: 160px 0 120px;
   }
+
   .page-404 .infinite-line {
     height: 320px;
     -webkit-background-size: cover;
     background-size: cover;
   }
-  .page-404 .content-text{
+
+  .page-404 .content-text {
     font-size: 33px;
   }
-  .back-home{
+
+  .back-home {
     margin-top: 80px;
   }
 }
@@ -1006,20 +1018,25 @@
     padding-top: 140px;
   }
 }
+
 @media only screen and (max-width: 1366px) {
-  .page-404{
+  .page-404 {
     padding: 160px 0 120px;
   }
+
   .page-404 .infinite-line {
     height: 270px;
   }
-  .page-404 .content-text{
+
+  .page-404 .content-text {
     font-size: 28px;
   }
-  .back-home{
+
+  .back-home {
     margin-top: 60px;
   }
 }
+
 @media only screen and (max-width: 1200px) {
   .page-projects .section-gallery {
     padding-top: 15px;
@@ -1043,6 +1060,13 @@
 
   .single-services .dev-services {
     padding-bottom: 100px;
+  }
+
+  .page-404 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
   }
 }
 
