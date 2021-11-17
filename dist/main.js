@@ -20885,17 +20885,17 @@ $(document).ready(function () {
     });
 
     //STICKY BTN
-    // var sticky = new Waypoint({
-    //     element: $('#triggerBtnSticky')[0],
-    //     offset: '50%',
-    //     handler: function (direction) {
-    //         if (direction === 'down') {
-    //             $('.contact-btn').addClass('sticky');
-    //         } else if (direction === 'up') {
-    //             $('.contact-btn').removeClass('sticky');
-    //         }
-    //     },
-    // });
+    var sticky = new Waypoint({
+        element: $('#triggerBtnSticky')[0],
+        offset: '50%',
+        handler: function (direction) {
+            if (direction === 'down') {
+                $('.contact-btn').addClass('sticky');
+            } else if (direction === 'up') {
+                $('.contact-btn').removeClass('sticky');
+            }
+        },
+    });
 
 
     //HIDE TEXT
