@@ -894,6 +894,10 @@
 /* PAGE 404  */
 .page-404 {
   padding: 195px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
 }
 
 .container {
@@ -1062,12 +1066,6 @@
     padding-bottom: 100px;
   }
 
-  .page-404 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-  }
 }
 
 @media only screen and (max-width: 980px) {
